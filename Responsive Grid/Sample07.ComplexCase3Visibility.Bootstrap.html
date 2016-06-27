@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>Complex visibility</title>
+	<style>
+		.container
+		{
+			background-color:red
+		}
+		.row
+		{
+			background-color:gray
+		}
+		.col-md-4
+		{
+			background-color:green;
+		}
+		.col-md-6
+		{
+			background-color:orange;
+		}
+		.col-md-8
+		{
+			background-color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+		  <div>RowAColA</div>
+		  <div>RowAColB</div>
+		</div>
+		<div class="row">
+		  <div style="width:50%;float:left;">RowAColA</div>
+		  <div style="width:50%;float:left;">RowAColB</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6">RowAColA</div>
+		  <div class="col-md-6">RowAColB</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6 visible-md">RowAColA</div>
+		  <div class="col-md-6 ">RowAColB</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6 hidden-md">RowAColA</div>
+		  <div class="col-md-6 ">RowAColB</div>
+		</div>
+	</div>
+</body>
+</html>

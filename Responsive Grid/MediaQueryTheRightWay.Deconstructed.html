@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Media Queries done Right</title>
+		<style>
+			.the-default-color {
+				background-color:red;
+			}
+
+			@media (min-width: 300px) {
+			  .the-small-color {
+				background-color:blue;
+			  }
+			}
+
+			@media (min-width: 600px) {
+			  .the-large-color {
+				background-color:green;
+			  }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="the-default-color">
+			Start of first text.
+		</div>
+		<div class="the-small-color">
+			Start of second text.
+		</div>
+		<div class="the-default-color the-large-color">
+			Start of third text.
+		</div>
+		<div class="the-large-color the-default-color">
+			Start of fourth text.
+		</div>
+	</body>
+</html>

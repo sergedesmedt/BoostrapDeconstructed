@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <style>
+	.showit-always {
+		display: block !important;
+	}
+	
+	.hideit {
+		display: none;
+	}
+	
+	.showit {
+		display: block;
+	}
+	
+	.hideit-later {
+		display: none;
+	}
+	
+    </style>
+</head>
+
+<body>
+    <div style="background:green">
+        <div style="display:none;">none</div>
+        <div style="visibility:hidden;">hidden</div>
+    </div>
+    <div style="background:orange"> 
+        <div style="background:green;width:25%;display:block">Fourth width, display block</div> 
+        <div style="background:blue;display:inline;width:50%">Half width, display inline</div> 
+    </div> 
+    <div style="background:grey"> 
+        <div class="showit-always">Show it always</div> 
+        <div class="showit hideit">Show it always, unless I hide it</div> 
+        <div class="showit hideit-later">Show it always, unless I hide it later</div> 
+        <div class="showit-always hideit">Show it always, even if I hide it</div> 
+    </div>
+</body>
+</html>

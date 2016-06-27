@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>Complex reordering</title>
+	<!--<style>
+		.container
+		{
+			background-color:red
+		}
+		.row
+		{
+			background-color:gray
+		}
+		.col-md-4
+		{
+			background-color:green;
+		}
+		.col-md-6
+		{
+			background-color:orange;
+		}
+		.col-md-8
+		{
+			background-color:blue;
+		}
+	</style>-->
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+		  <div class="col-md-6 col-md-push-6">RowAColA_FirstAndPush</div>
+		  <div class="col-md-6 col-md-pull-6">RowAColB_SecondAndPull</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6 col-md-pull-6">RowAColA_FirstAndPull</div>
+		  <div class="col-md-6 col-md-push-6">RowAColB_SecondAndPush</div>
+		</div>
+	</div>
+</body>
+</html>
