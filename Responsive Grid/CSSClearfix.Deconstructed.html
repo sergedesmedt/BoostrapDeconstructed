@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <style type="text/css">
+        .clearmeempty:after {
+            clear:left;
+            display:table
+        }
+        .clearme:after {
+            content: " ";
+            clear:left;
+            display:table
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background:aqua;width:50%;border:solid">
+        <div style="background:green;width:25%;">Fourth width</div>
+        <div style="background:yellow;width:50%;">Half width</div>
+    </div>
+    <div style="background:violet;width:50%;border:solid">
+        <div style="background:green;width:25%;float:left">Fourth width and floating</div>
+        <div style="background:yellow;width:50%;float:left">Half width and floating</div>
+        <div style="clear:left">the cleared div</div>
+    </div>
+    <div style="background:violet;width:50%;border:solid">
+        <div style="background:green;width:25%;float:left">Fourth width and floating</div>
+        <div style="background:yellow;width:50%;float:left">Half width and floating</div>
+        <table style="clear:left"><tr><td></td></tr></table>
+    </div>
+    <div style="background:chocolate;width:50%;border:solid">
+        <div style="background:green;width:25%;float:left">Fourth width and floating</div>
+        <div style="background:yellow;width:50%;float:left">Half width and floating</div>
+        <span style="clear:left">the cleared span but not working</span>
+    </div>
+    <div style="background:lime;width:50%;border:solid">
+        <div style="background:green;width:25%;float:left">Fourth width and floating</div>
+        <div style="background:yellow;width:50%;float:left">Half width and floating</div>
+        <span style="clear:left;display:table;">the cleared span and working</span>
+    </div>
+    <div style="background:teal;width:50%;border:solid;" class="clearme">
+        <div style="background:green;width:25%;float:left">Fourth width and floating</div>
+        <div style="background:yellow;width:50%;float:left">Half width and floating</div>
+    </div>
+    <div style="background:red;width:50%;border:solid;" class="clearmeempty">
+        <div style="background:green;width:25%;float:left">Fourth width and floating</div>
+        <div style="background:yellow;width:50%;float:left">Half width and floating</div>
+    </div>
+</body>
+</html>
