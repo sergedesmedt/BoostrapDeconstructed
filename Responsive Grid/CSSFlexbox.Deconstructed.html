@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>CSS Flexbox</title>
+	<style>
+		.el-frame {
+            border:solid;
+		}
+		.bg-gray {
+			background-color:gray;
+		}
+		.bg-red {
+			background-color:red;
+		}
+		.bg-green {
+			background-color:green;
+		}
+		.bg-blue {
+			background-color:blue;
+		}
+		.bg-orange {
+			background-color:orange;
+		}
+
+		.w1 {
+			width: 400px;
+		}
+
+        .my-flex {
+            display: flex;
+			flex-wrap: wrap;
+        }
+	</style>
+</head>
+<body>
+	<div class="el-frame">
+		<div class="bg-red">My first item in a regular DIV</div>
+		<div class="bg-green">My second item a regular DIV</div>
+		<div class="bg-blue">My third item a regular DIV</div>
+	</div></body>
+	<div class="my-flex el-frame">
+		<div class="bg-red w1">My first item in the flexbox</div>
+		<div class="bg-green w1">My second item in the flexbox</div>
+		<div class="bg-blue w1">My third item in the flexbox</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="flex-basis:20%; background-color:red;">My first item in the flexbox</div>
+		<div style="flex-basis:30%; background-color:green;">My second item in the flexbox</div>
+		<div style="flex-basis:50%; background-color:blue;">My third item in the flexbox</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="flex-basis:auto; width:30%; background-color:red;">My first item in the flexbox</div>
+		<!--<div style="flex-basis:content; width:45%; background-color:green;">My second item in the flexbox</div>-->
+		<div style="flex-basis:50%; width:25%; background-color:blue;">My third item in the flexbox</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="flex-basis:auto; flex-grow:1; width:30%; background-color:red;">My first item in the flexbox</div>
+		<div style="flex-basis:50%; flex-grow:1; width:25%; background-color:blue;">My third item in the flexbox</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="width:30%; background-color:red;">My first item in the flexbox</div>
+		<div style="width:10%; background-color:orange;">grow</div>
+		<div style="width:50%; background-color:blue;">My third item in the flexbox</div>
+		<div style="width:10%; background-color:orange;">grow</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="flex-basis:auto; flex-grow:1; width:30%; background-color:red;">My first item in the flexbox</div>
+		<div style="flex-basis:50%; flex-grow:2; width:25%; background-color:blue;">My third item in the flexbox</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="width:30%; background-color:red;">My first item in the flexbox</div>
+		<div style="width:6.666666%; background-color:orange;">grow</div>
+		<div style="width:50%; background-color:blue;">My third item in the flexbox</div>
+		<div style="width:13.333337%; background-color:orange;">grow</div>
+	</div>
+	<div style="display: flex; flex-wrap: nowrap;">
+		<div style="flex-basis:60%; flex-shrink:0; background-color:red;">First none</div>
+		<div style="flex-basis:50%; flex-shrink:0; background-color:blue;">Second none</div>
+		<div style="flex-basis:20%; flex-shrink:0; background-color:green;">Third none</div>
+	</div>
+	<div style="display: flex; flex-wrap: nowrap;">
+		<div style="flex-basis:60%; flex-shrink:1; background-color:red;">First</div>
+		<div style="flex-basis:50%; flex-shrink:1; background-color:blue;">Second</div>
+		<div style="flex-basis:20%; flex-shrink:1; background-color:green;">Third</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="width:46.153846%; background-color:red;">My first item in the flexbox</div>
+		<div style="width:13.846454%; background-color:orange;">grow</div>
+	</div>
+	<div style="display: flex; flex-wrap: nowrap;">
+		<div style="flex-basis:60%; flex-shrink:2; background-color:red;">First</div>
+		<div style="flex-basis:50%; flex-shrink:1; background-color:blue;">Second</div>
+		<div style="flex-basis:20%; flex-shrink:1; background-color:green;">Third</div>
+	</div>
+	<!-- <div class="my-flex el-frame">
+		<div style="width:50%; background-color:red;">My first item in the flexbox</div>
+		<div style="width:10%; background-color:orange;">grow</div>
+	</div> -->
+	<div class="my-flex el-frame">
+		<div style="width:41.052632%; background-color:red;">My first item in the flexbox</div>
+		<div style="width:18.947368%; background-color:orange;">grow</div>
+	</div>
+</body>
+</html>
