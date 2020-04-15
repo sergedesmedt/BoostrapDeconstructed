@@ -35,72 +35,96 @@
 	</style>
 </head>
 <body>
+	<!-- regular DIV -->
 	<div class="el-frame">
 		<div class="bg-red">My first item in a regular DIV</div>
 		<div class="bg-green">My second item a regular DIV</div>
 		<div class="bg-blue">My third item a regular DIV</div>
 	</div></body>
+	<!-- flexbox DIV: children are horizontally layed-out -->
 	<div class="my-flex el-frame">
 		<div class="bg-red w1">My first item in the flexbox</div>
 		<div class="bg-green w1">My second item in the flexbox</div>
 		<div class="bg-blue w1">My third item in the flexbox</div>
 	</div>
+	<!-- flexbox DIV with width specification for flex items: use flex-basis percentage-->
 	<div class="my-flex el-frame">
-		<div style="flex-basis:20%; background-color:red;">My first item in the flexbox</div>
-		<div style="flex-basis:30%; background-color:green;">My second item in the flexbox</div>
-		<div style="flex-basis:50%; background-color:blue;">My third item in the flexbox</div>
+		<div style="flex-basis:20%; background-color:red;">My first item with flex width</div>
+		<div style="flex-basis:30%; background-color:green;">My second item with flex width</div>
+		<div style="flex-basis:50%; background-color:blue;">My third item with flex width</div>
 	</div>
+	<!-- flexbox DIV with width specification for flex items: also specify a size-->
 	<div class="my-flex el-frame">
-		<div style="flex-basis:auto; width:30%; background-color:red;">My first item in the flexbox</div>
+		<div style="flex-basis:auto; width:30%; background-color:red;">My first item with flex width and size</div>
 		<!--<div style="flex-basis:content; width:45%; background-color:green;">My second item in the flexbox</div>-->
-		<div style="flex-basis:50%; width:25%; background-color:blue;">My third item in the flexbox</div>
+		<div style="flex-basis:50%; width:25%; background-color:blue;">My second item with flex width and size</div>
 	</div>
+	<!-- flexbox DIV with width specification for flex items: also specify growth-->
 	<div class="my-flex el-frame">
-		<div style="flex-basis:auto; flex-grow:1; width:30%; background-color:red;">My first item in the flexbox</div>
-		<div style="flex-basis:50%; flex-grow:1; width:25%; background-color:blue;">My third item in the flexbox</div>
+		<div style="flex-basis:30%; flex-grow:1; background-color:red;">My first item with growth</div>
+		<div style="flex-basis:50%; flex-grow:1; background-color:blue;">My second item with growth</div>
 	</div>
+	<!-- flexbox DIV with width specification for flex items: growth calculation-->
 	<div class="my-flex el-frame">
-		<div style="width:30%; background-color:red;">My first item in the flexbox</div>
-		<div style="width:10%; background-color:orange;">grow</div>
-		<div style="width:50%; background-color:blue;">My third item in the flexbox</div>
-		<div style="width:10%; background-color:orange;">grow</div>
+		<div style="width:30%; background-color:red;">My first item original width</div>
+		<div style="width:10%; background-color:orange;">growth</div>
+		<div style="width:50%; background-color:blue;">My second item original width</div>
+		<div style="width:10%; background-color:orange;">growth</div>
 	</div>
+	<!-- flexbox DIV with width specification for flex items: also specify growth-->
 	<div class="my-flex el-frame">
-		<div style="flex-basis:auto; flex-grow:1; width:30%; background-color:red;">My first item in the flexbox</div>
-		<div style="flex-basis:50%; flex-grow:2; width:25%; background-color:blue;">My third item in the flexbox</div>
+		<div style="flex-basis:30%; flex-grow:1; background-color:red;">My first item with growth</div>
+		<div style="flex-basis:50%; flex-grow:2; background-color:blue;">My second item with double growth</div>
 	</div>
+	<!-- flexbox DIV with width specification for flex items: growth calculation-->
 	<div class="my-flex el-frame">
-		<div style="width:30%; background-color:red;">My first item in the flexbox</div>
-		<div style="width:6.666666%; background-color:orange;">grow</div>
-		<div style="width:50%; background-color:blue;">My third item in the flexbox</div>
-		<div style="width:13.333337%; background-color:orange;">grow</div>
+		<div style="width:30%; background-color:red;">My first item original width</div>
+		<div style="width:6.666666%; background-color:orange;">growth</div>
+		<div style="width:50%; background-color:blue;">My second item original width</div>
+		<div style="width:13.333337%; background-color:orange;">growth</div>
 	</div>
+	<!-- flexbox DIV with width specification for flex items: specify size-->
 	<div style="display: flex; flex-wrap: nowrap;">
-		<div style="flex-basis:60%; flex-shrink:0; background-color:red;">First none</div>
-		<div style="flex-basis:50%; flex-shrink:0; background-color:blue;">Second none</div>
-		<div style="flex-basis:20%; flex-shrink:0; background-color:green;">Third none</div>
+		<div style="flex-basis:60%; flex-shrink:0; background-color:red;">First no shrink</div>
+		<div style="flex-basis:50%; flex-shrink:0; background-color:blue;">Second no shrink</div>
+		<div style="flex-basis:20%; flex-shrink:0; background-color:green;">Third no shrink</div>
 	</div>
+	<!-- flexbox DIV with width specification for flex items: also specify shrink-->
 	<div style="display: flex; flex-wrap: nowrap;">
-		<div style="flex-basis:60%; flex-shrink:1; background-color:red;">First</div>
-		<div style="flex-basis:50%; flex-shrink:1; background-color:blue;">Second</div>
-		<div style="flex-basis:20%; flex-shrink:1; background-color:green;">Third</div>
+		<div style="flex-basis:60%; flex-shrink:1; background-color:red;">First with shrink</div>
+		<div style="flex-basis:50%; flex-shrink:1; background-color:blue;">Second with shrink</div>
+		<div style="flex-basis:20%; flex-shrink:1; background-color:green;">Third shrink</div>
+	</div>
+	<!-- flexbox DIV with width specification for flex items: shrink calculation-->
+	<div class="my-flex el-frame">
+		<div style="width:46.153846%; background-color:red;">My first item after shrinking</div>
+		<div style="width:13.846454%; background-color:orange;">shrink</div>
+	</div>
+	<!-- flexbox DIV with width specification for flex items: also specify shrink-->
+	<div style="display: flex; flex-wrap: nowrap;">
+		<div style="flex-basis:60%; flex-shrink:2; background-color:red;">First with double shrink</div>
+		<div style="flex-basis:50%; flex-shrink:1; background-color:blue;">Second with shrink</div>
+		<div style="flex-basis:20%; flex-shrink:1; background-color:green;">Third with shrink</div>
+	</div>
+	<!-- flexbox DIV with width specification for flex items: shrink calculation-->
+	<div class="my-flex el-frame">
+		<div style="width:41.052632%; background-color:red;">My first item after double shrink</div>
+		<div style="width:18.947368%; background-color:orange;">shrink</div>
+	</div>
+	<!-- flexbox div with flex children two levels deep -->
+	<div class="my-flex el-frame">
+		<div>
+			<div style="flex-basis:20%; background-color:red;">My first item 2 deep</div>
+		</div>
+		<div style="flex-basis:30%; background-color:green;">My second item with flex width</div>
+		<div style="flex-basis:50%; background-color:blue;">My third item with flex width</div>
 	</div>
 	<div class="my-flex el-frame">
-		<div style="width:46.153846%; background-color:red;">My first item in the flexbox</div>
-		<div style="width:13.846454%; background-color:orange;">grow</div>
-	</div>
-	<div style="display: flex; flex-wrap: nowrap;">
-		<div style="flex-basis:60%; flex-shrink:2; background-color:red;">First</div>
-		<div style="flex-basis:50%; flex-shrink:1; background-color:blue;">Second</div>
-		<div style="flex-basis:20%; flex-shrink:1; background-color:green;">Third</div>
-	</div>
-	<!-- <div class="my-flex el-frame">
-		<div style="width:50%; background-color:red;">My first item in the flexbox</div>
-		<div style="width:10%; background-color:orange;">grow</div>
-	</div> -->
-	<div class="my-flex el-frame">
-		<div style="width:41.052632%; background-color:red;">My first item in the flexbox</div>
-		<div style="width:18.947368%; background-color:orange;">grow</div>
+		<div>
+			<div style="flex-basis:200px; background-color:red;">My first item 2 deep</div>
+		</div>
+		<div style="flex-basis:30%; background-color:green;">My second item with flex width</div>
+		<div style="flex-basis:50%; background-color:blue;">My third item with flex width</div>
 	</div>
 </body>
 </html>
