@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CSS Flexbox: nested columns</title>
+    <style>
+		.el-frame {
+            border:solid;
+		}
+        .my-flex {
+            display: flex;
+			flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="background:red;width:50%"> Half the container width: in this case the body tag </div> 
+    <div style="background:orange;width:50%"> 
+        <div style="background:green;width:50%"> Half the container width: in this case the orange div tag </div> 
+        <div style="background:blue;width:100%"> Full container width: in this case the orange div tag </div> 
+    </div> 
+    <div style="background:grey;width:50%;border-style:solid"> 
+        <div style="background:green;width:50%;float:left"> Half the container width: in this case the grey div tag </div> 
+        <div style="background:blue;width:25%;float:left"> Fourth the container width: in this case the grey div tag </div> 
+    </div> -->
+
+	<div class="my-flex el-frame">
+		<div style="flex-basis:10%; background-color:red;">My first item with flex width</div>
+		<div style="flex-basis:30%; background-color:green;">My second item with flex width</div>
+		<div style="flex-basis:50%; background-color:blue;">My third item with flex width</div>
+	</div>
+
+
+</body>
+</html>
