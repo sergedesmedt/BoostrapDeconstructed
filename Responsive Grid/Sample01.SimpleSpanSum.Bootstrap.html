@@ -6,40 +6,59 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<title>Simple</title>
+	<title>Simple Bootstrap 3</title>
 	<style>
-		.row
+		.el-frame
 		{
-			background-color:gray;
             border:solid;
 		}
-		.col-md-4
+		.bg-gray
+		{
+			background-color:gray;
+		}
+		.bg-red
+		{
+			background-color:red;
+		}
+		.bg-green
 		{
 			background-color:green;
+		}
+		.bg-blue
+		{
+			background-color:blue;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-4">First</div>
-			<div class="col-md-4">Second</div>
-			<div class="col-md-4">Third</div>
+		<div class="row el-frame bg-gray">
+			<!-- bootstrap 3 does NOT have a simple col CSS-class -->
+			<div class="col bg-red">First</div>
+			<div class="col bg-green">Second</div>
+			<div class="col bg-blue">Third</div>
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
-		  <div class="col-md-8">The first column</div>
-		  <div class="col-md-4">The second column</div>
+		<div class="row el-frame bg-gray">
+			<div class="col-md-4 bg-red">First</div>
+			<div class="col-md-4 bg-green">Second</div>
+			<div class="col-md-4 bg-blue">Third</div>
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-3">First third</div>
-			<div class="col-md-3">Second third</div>
+		<div class="row el-frame bg-gray">
+		  <div class="col-md-8 bg-red">The first column</div>
+		  <div class="col-md-4 bg-green">The second column</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">Third third</div>
+	</div>
+	<div class="container">
+		<div class="row el-frame bg-gray">
+			<div class="col-md-3 bg-red">First third</div>
+			<div class="col-md-3 bg-green"">Second third</div>
+		</div>
+		<div class="row el-frame bg-gray">
+			<div class="col-md-3 bg-red">Third third</div>
 		</div>
 	</div>
 </body>
