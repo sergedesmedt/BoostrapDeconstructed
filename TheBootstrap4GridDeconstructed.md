@@ -10,7 +10,7 @@ Few years back I wrote an article [The Bootstrap Grid Deconstructed](https://www
 
 In the meanwhile however, my attention got drawn to other subjets, but Bootstrap also got a complete rewrite of its grid system. The new grid system is based on the new flex layout CSS system. 
 
-While upgrading my skillset and implementing an Angular based website I again liked at the Bootstrap Grid system and decided to deep-dive into it and see what makes it work.
+While upgrading my skillset and implementing an Angular based website I again looked at the Bootstrap Grid system and decided to deep-dive into it and see what makes it work.
 
 I'll be using my original article as a kind of template for the structure of this article and will sometimes reference it for things explained there. I will also assume a basic knowledge of HTML and CSS. That you know what a `<div>`, `<span>`, etc are..., that you know about CSS inheritance rules, ... I also assume you have read the article about the Bootstrap 3 grid system so you are familiar with responsive breakpoints and the like.
 
@@ -22,11 +22,11 @@ So, let's get started.
 
 ### The Grid: it's still all about rows and colums
 
-Nothing changed here: we still need to define a container with rows which in turn contains columns. However, where in the Bootstrap 3 grid you had to always specify the width of your columns and make them add up to a total of 12, this is no longer true for the Bootstrap 4 grid.
+Nothing has changed here: we still need to define a container with rows which in turn contains columns. However, where in the Bootstrap 3 grid you had to always specify the width of your columns and make them add up to a total of 12, this is no longer true for the Bootstrap 4 grid.
 
-The Bootstrap 4 grid defines a simple "col" class which allows you to evenly spread your columns over the width of your page while taking up as much space as necessary for the content to match the column.
+The Bootstrap 4 grid defines a simple `col` class which allows you to evenly spread your columns over the width of your page while taking up as much space as necessary for the content to match the column.
 
-Of course, you still have the responsive versions of the col CSS class with the "col-xx-yy" structure:
+Of course, you still have the responsive versions of the col CSS class with the `col-xx-yy` structure:
 
 - xx: specifies the breakpoint. That is: from which screensize does the corresponding span take effect.
 - yy: specifies the span of the column. That is: how much space does it take in a row.
@@ -88,7 +88,7 @@ Let's try following:
 ```
 [See it in action](http://htmlpreview.github.io/?https://github.com/sergedesmedt/BootstrapDeconstructed/blob/master/Responsive%20Grid/Sample02.SinglularBreakpoint.Bootstrap4.html)
 
- If you now stretch and shrink your browser window, you will notice below a certain width the columns will transition into rows. For the "sm" columns this is at a different width than for the "md" columns. The Bootstrap 4 breakpoints define an extra breakpoint and as a result the width at which the breakpoints are applied is also different:
+If you now stretch and shrink your browser window, you will notice below a certain width the columns will transition into rows. For the "sm" columns this is at a different width than for the "md" columns. The Bootstrap 4 breakpoints define an extra breakpoint and as a result the width at which the breakpoints are applied is also different:
 
 - *none*: if you specify nothing for the breakpoint, then you will always have columns (smaller than 576px)
 - sm: larger than or equal to 576px
@@ -96,7 +96,7 @@ Let's try following:
 - lg: larger than or equal to 992px
 - xl: larger than or equal to 1200px
 
-So, in the above when we used a class with "sm" as the breakpoint, then we meant:: if your browser window is wider then or equal to 576px use columns, otherwise use rows.
+So, in the above when we used a class with "sm" as the breakpoint, then we meant: if your browser window is wider then or equal to 576px use columns, otherwise use rows.
 
 Of course, we can use classes with different breakpoints on a single element:
 ```
@@ -182,7 +182,7 @@ Let's look at the constant part
 
 Although I defined this above for the .col-md-4 specifier, the same is used for all others like .col, .col-1, ..., .col-lg-1, etc...
 
-There is already a difference her: we explicitly set the column width to 100%
+There is already a difference here: we explicitly set the column width to 100%
 
 Next is the variational part, driven by the responsive breakpoints:
 
@@ -195,11 +195,11 @@ Next is the variational part, driven by the responsive breakpoints:
 
 Whereas in Bootstrap 3 we simply specified the width here, in Bootstrap 4 we have this flex specification and an additional max-width property.
 
-So, what is this all about? Well, you may have read about the Bootstrap 4 Grid using the CS flex system. Well, this is it. Let's investigate this further.
+So, what is this all about? Well, you may have read about the Bootstrap 4 Grid using the CSS flex system. Well, this is it. Let's investigate this further.
 
 #### The CSS Flex layout system
 
-Let's start out simple and investigate the `display: flex`CSS property:
+Let's start out simple and investigate the `display: flex` CSS property:
 
 ```
 <style>
@@ -561,6 +561,7 @@ Offsetting columns is done through adding margins to the `div`s representing the
 <div  style="flex-basis:34%; margin-left:45%; ; background-color:blue;">My fourth item with no order</div>
 </div>
 ```
+[See it in action](http://htmlpreview.github.io/?https://github.com/sergedesmedt/BootstrapDeconstructed/blob/master/Responsive%20Grid/ReorderingColsFlexboxCSS.Deconstructed.html)
 
 By adding margins to the left, we are pushing the column to the right. Of course, if the margins get to large, the `div` is pushed to the next row. You might expect it then to start at the beginning, but because the margin still exists it doesn't.
 
@@ -595,6 +596,7 @@ Apart from the naming of the classes and the way responsive breakpoints are hand
 	<div  class="showit-always hideit">Show it always, even if I hide it</div>
 </div>
 ```
+[See it in action](http://htmlpreview.github.io/?https://github.com/sergedesmedt/BootstrapDeconstructed/blob/master/Responsive%20Grid/VisibilityFlexbox.Deconstructed.html)
 
 Hiding is still done by setting the `display` property to `none`. However, where in Bootstrap 3 there were `visible`and `hidden` CSS classes, in Bootstrap 4 we only have a bunch of classes named after the possible values for the `display` property. 
 
