@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CSS Flexbox: ordering columns</title>
+    <style>
+		.el-frame {
+            border:solid;
+		}
+        .my-flex {
+            display: flex;
+			flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+
+<body>
+	<div class="my-flex el-frame">
+		<div style="flex-basis:33%; background-color:red;">My first item followed by repeating text, followed by repeating text, followed by repeating text</div>
+		<div style="flex-basis:33%; background-color:green;">My second item</div>
+		<div style="flex-basis:34%; background-color:blue;">My third item</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="flex-basis:33%; background-color:red;">My first item with largest order followed by repeating text, followed by repeating text, followed by repeating text</div>
+		<div style="flex-basis:34%; margin-left:33%; background-color:blue;">My third item with no order</div>
+	</div>
+	<div class="my-flex el-frame">
+		<div style="flex-basis:33%; background-color:red;">My first item with largest order followed by repeating text, followed by repeating text, followed by repeating text</div>
+		<div style="flex-basis:34%; margin-left:45%; ; background-color:blue;">My fourth item with no order</div>
+	</div>
+</body>
+</html>

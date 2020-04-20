@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <style>
+    .el-frame {
+        border:solid;
+    }
+    .my-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+	.showit-always {
+		display: block !important;
+	}
+	
+	.hideit {
+		display: none;
+	}
+	
+	.showit {
+		display: block;
+	}
+	
+	.hideit-later {
+		display: none;
+	}
+	
+    </style>
+</head>
+
+<body>
+    <div class="my-flex el-frame">
+        <div style="display:none;">none</div>
+        <div style="visibility:hidden;">hidden</div>
+    </div>
+    <div class="el-frame">
+        <div style="background:green;width:25%;display:block">Fourth width, display block</div> 
+        <div style="background:blue;display:inline;width:50%">Half width, display inline</div> 
+        <div style="background:green;width:25%;display:flex">Fourth width, display flex</div> 
+    </div> 
+    <div class="my-flex el-frame">
+        <div style="background:green;width:25%;display:block">Fourth width, display block</div> 
+        <div style="background:blue;display:inline;width:50%">Half width, display inline</div> 
+        <div style="background:green;width:25%;display:flex">Fourth width, display flex</div> 
+    </div> 
+    <div class="el-frame">
+        <div class="showit-always">Show it always</div> 
+        <div class="showit hideit">Show it always, unless I hide it</div> 
+        <div class="showit hideit-later">Show it always, unless I hide it later</div> 
+        <div class="showit-always hideit">Show it always, even if I hide it</div> 
+    </div>
+</body>
+</html>
