@@ -60,6 +60,11 @@
 		<div style="flex-basis:50%; width:25%; background-color:blue;">My second item with flex width and size</div>
 	</div>
 	<h1><a name="flexboxgrowth"></a>Flexbox DIV with growth specification for flex items</h1>
+	<!-- flexbox DIV with width specification for flex items: specify size-->
+	<div style="display: flex; flex-wrap: nowrap;">
+		<div style="flex-basis:30%; flex-grow:0; background-color:red;">First no grow</div>
+		<div style="flex-basis:50%; flex-grow:0; background-color:blue;">Second no grow</div>
+	</div>
 	<!-- flexbox DIV with width specification for flex items: also specify growth-->
 	<div class="my-flex el-frame">
 		<div style="flex-basis:30%; flex-grow:1; background-color:red;">My first item with growth</div>
@@ -84,13 +89,13 @@
 		<div style="width:50%; background-color:blue;">My second item original width</div>
 		<div style="width:13.333337%; background-color:orange;">growth</div>
 	</div>
+	<h1><a name="flexboxshrink"></a>Flexbox DIV with shrink specification for flex items</h1>
 	<!-- flexbox DIV with width specification for flex items: specify size-->
 	<div style="display: flex; flex-wrap: nowrap;">
 		<div style="flex-basis:60%; flex-shrink:0; background-color:red;">First no shrink</div>
 		<div style="flex-basis:50%; flex-shrink:0; background-color:blue;">Second no shrink</div>
 		<div style="flex-basis:20%; flex-shrink:0; background-color:green;">Third no shrink</div>
 	</div>
-	<h1><a name="flexboxshrink"></a>Flexbox DIV with shrink specification for flex items</h1>
 	<!-- flexbox DIV with width specification for flex items: also specify shrink-->
 	<div style="display: flex; flex-wrap: nowrap;">
 		<div style="flex-basis:60%; flex-shrink:1; background-color:red;">First with shrink</div>
