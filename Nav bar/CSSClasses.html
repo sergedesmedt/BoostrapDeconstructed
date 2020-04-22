@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>CSS classes</title>
+	<style>
+        .parentsection {
+            border:solid;
+            border-color: red;
+        }
+        
+        .mainsection {
+            border:solid;
+            border-color: blue;
+        }
+        
+        .parentsection .mainsection {
+            border:solid;
+            border-color: green;
+        }
+        
+        .parentsection .mainsection .mainsection {
+            border:solid;
+            border-color: yellow;
+        }
+	</style>
+</head>
+<body>
+    <div class="parentsection">
+        <div class="mainsection">
+            <div class="mainsection">A first subsection</div>
+            <div>A second subsection</div>
+        </div>
+        <div class="mainsection">A second main section</div>
+    </div>
+    <div class="parentsection">
+        <div>
+            <div class="mainsection">A first subsection</div>
+            <div>A second subsection</div>
+        </div>
+        <div class="mainsection">A second main section</div>
+    </div>
+    <div>
+        <div class="mainsection">A second main section in a non parent section</div>
+    </div>
+</body>
+</html>
