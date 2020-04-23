@@ -3,25 +3,30 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>CSS classes</title>
+	<title>CSS Classes</title>
 	<style>
         .parentsection {
-            border:solid;
+            border: solid;
             border-color: red;
         }
         
         .mainsection {
-            border:solid;
+            border: solid;
             border-color: blue;
         }
         
         .parentsection .mainsection {
-            border:solid;
+            border: solid;
             border-color: green;
+        }
+
+        .something-inbetween{
+            border: solid;
+            border-color: purple;
         }
         
         .parentsection .mainsection .mainsection {
-            border:solid;
+            border: solid;
             border-color: yellow;
         }
 	</style>
@@ -40,6 +45,10 @@
             <div>A second subsection</div>
         </div>
         <div class="mainsection">A second main section</div>
+        <div class="something-inbetween">
+            <div class="mainsection">A third subsection</div>
+            <div>A second subsection</div>
+        </div>
     </div>
     <div>
         <div class="mainsection">A second main section in a non parent section</div>

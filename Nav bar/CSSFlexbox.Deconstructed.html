@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>CSS Flexbox</title>
+	<style>
+		.bg-gray {
+			background-color:gray;
+		}
+		.bg-red {
+			background-color:red;
+		}
+		.bg-green {
+			background-color:green;
+		}
+		.bg-blue {
+			background-color:blue;
+		}
+		.bg-orange {
+			background-color:orange;
+		}
+
+        .width-100 {
+            width: 100px;
+        }
+
+
+        .simple-flexbox {
+            display:flex;
+        }
+        .flexbox-justify-end {
+            justify-content: flex-end;
+        }
+        .vertical-flexbox {
+            display:flex;
+            flex-direction: column;
+        }
+
+        .flexitem-dim {
+            flex-basis: 50px;
+        }
+        .flexitem-expand {
+            flex-basis: auto;
+            flex-grow: 1;
+        }
+	</style>
+</head>
+<body>
+    <div>
+        <div class="bg-red">No Flexbox subitem 1</div>
+        <div>No Flexbox subitem 2</div>
+        <div>No Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox">
+        <div class="flexitem-dim width-100">Flexbox subitem 1</div>
+        <div>Flexbox subitem 2</div>
+        <div>Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox">
+        <div class="flexitem-expand">Flexbox subitem 1</div>
+        <div>Flexbox subitem 2</div>
+        <div>Flexbox subitem 3</div>
+    </div>
+    <div class="vertical-flexbox">
+        <div class="bg-red flexitem-dim">Flexbox subitem 1</div>
+        <div>Flexbox subitem 2</div>
+        <div>Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox flexbox-justify-end">
+        <div >Flexbox subitem 1</div>
+        <div>Flexbox subitem 2</div>
+        <div>Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox">
+        <div>Flexbox subitem 1</div>
+        <div class="simple-flexbox flexbox-justify-end">
+            <div >Flexbox subitem 1</div>
+            <div>Flexbox subitem 2</div>
+            <div>Flexbox subitem 3</div>
+        </div>
+    </div>
+    <div class="simple-flexbox">
+        <div>Flexbox subitem 1</div>
+        <div class="simple-flexbox flexbox-justify-end flexitem-expand">
+            <div >Flexbox subitem 1</div>
+            <div>Flexbox subitem 2</div>
+            <div>Flexbox subitem 3</div>
+        </div>
+    </div>
+</body>
+</html>
