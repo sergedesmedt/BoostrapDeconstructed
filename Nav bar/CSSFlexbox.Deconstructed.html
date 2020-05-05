@@ -5,6 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>CSS Flexbox</title>
 	<style>
+
+        .parent-container {
+            background-color: gray;
+            border: solid;
+            border-color: black;
+            border-width: 2px;
+        }
+
 		.bg-gray {
 			background-color:gray;
 		}
@@ -21,72 +29,284 @@
 			background-color:orange;
 		}
 
+
+
+        .simple-flexbox {
+            display: flex;
+        }
+
+        .vertical-flexbox {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+        .height-100 {
+            height: 100px;
+        }
+
         .width-100 {
             width: 100px;
         }
 
+        .width-33percent {
+            width: 33%;
+        }
 
-        .simple-flexbox {
-            display:flex;
-        }
-        .flexbox-justify-end {
-            justify-content: flex-end;
-        }
-        .vertical-flexbox {
-            display:flex;
-            flex-direction: column;
+        .flexitem-auto {
+            flex-basis: auto;
         }
 
         .flexitem-dim {
-            flex-basis: 50px;
+            flex-basis: 150px;
         }
-        .flexitem-expand {
+
+        .flexitem-dimpercentage {
+            flex-basis: 33%;
+        }
+
+        .flexitem-dimpercentage-large {
+            flex-basis: 60%;
+        }
+
+        .flexitem-expand-grow1 {
             flex-basis: auto;
             flex-grow: 1;
         }
+
+        .flexitem-expand-grow2 {
+            flex-basis: auto;
+            flex-grow: 2;
+        }
+
+        .flexitem-collapse-noshrink {
+            flex-shrink: 0;
+        }
+
+        .flexitem-collapse-shrink1 {
+            flex-basis: 60%;
+            flex-shrink: 1;
+        }
+
+        .flexitem-collapse-shrink2 {
+            flex-basis: 60%;
+            flex-shrink: 2;
+        }
+
+
+        .flexbox-justify-end {
+            justify-content: flex-end;
+        }
+
+        .flexbox-justify-between {
+            justify-content: space-between;
+        }
+
+
+        .flexbox-align-top {
+            align-items: flex-start;
+        }
+
+        .flexbox-align-center {
+            align-items: center;
+        }
+
+
+        .flexbox-wrapping {
+            flex-wrap: wrap;
+        }
+
+        .flexbox-nowrapping {
+            flex-wrap: nowrap;
+        }
+
 	</style>
 </head>
 <body>
+    <h1><a name="flowdir"></a>Managing the flow direction</h1>
     <div>
         <div class="bg-red">No Flexbox subitem 1</div>
-        <div>No Flexbox subitem 2</div>
-        <div>No Flexbox subitem 3</div>
+        <div class="bg-green">No Flexbox subitem 2</div>
+        <div class="bg-blue">No Flexbox subitem 3</div>
     </div>
     <div class="simple-flexbox">
-        <div class="flexitem-dim width-100">Flexbox subitem 1</div>
-        <div>Flexbox subitem 2</div>
-        <div>Flexbox subitem 3</div>
-    </div>
-    <div class="simple-flexbox">
-        <div class="flexitem-expand">Flexbox subitem 1</div>
-        <div>Flexbox subitem 2</div>
-        <div>Flexbox subitem 3</div>
+        <div class="bg-red">Default Flexbox subitem 1</div>
+        <div class="bg-green">Default Flexbox subitem 2</div>
+        <div class="bg-blue">Default Flexbox subitem 3</div>
     </div>
     <div class="vertical-flexbox">
-        <div class="bg-red flexitem-dim">Flexbox subitem 1</div>
-        <div>Flexbox subitem 2</div>
-        <div>Flexbox subitem 3</div>
+        <div class="bg-red">Vertical Flexbox subitem 1</div>
+        <div class="bg-green">Vertical Flexbox subitem 2</div>
+        <div class="bg-blue">Vertical Flexbox subitem 3</div>
     </div>
-    <div class="simple-flexbox flexbox-justify-end">
-        <div >Flexbox subitem 1</div>
-        <div>Flexbox subitem 2</div>
-        <div>Flexbox subitem 3</div>
+
+    <h1><a name="flowdirlayout"></a>Managing the layout of flex children: in the direction of the flow for horizontal flow</h1>
+    <div class="simple-flexbox parent-container flexbox-justify-end">
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox parent-container flexbox-justify-between">
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+    </div>
+
+    <h1>Managing the layout of flex children: in the direction of the flow for vertical flow</h1>
+    <div class="vertical-flexbox height-100 parent-container flexbox-justify-end">
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="vertical-flexbox height-100 parent-container flexbox-justify-between">
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+    </div>
+
+    <h1><a name="crossdirlayout"></a>Managing the layout of flex children: in the cross direction for horizontal flow</h1>
+    <div class="simple-flexbox parent-container flexbox-align-top">
+        <div class="width-33percent bg-red">Flexbox subitem 1 with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow</div>
+        <div class="width-33percent bg-green">Flexbox subitem 2</div>
+        <div class="width-33percent bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox parent-container flexbox-align-center">
+        <div class="width-33percent bg-red">Flexbox subitem 1 with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow</div>
+        <div class="width-33percent bg-green">Flexbox subitem 2</div>
+        <div class="width-33percent bg-blue">Flexbox subitem 3</div>
+    </div>
+
+    <h1><a name="wrapping"></a>Managing content wrapping</h1>
+    <div class="simple-flexbox flexbox-wrapping">
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox flexbox-nowrapping">
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+        <div class=" bg-red">Flexbox subitem 1</div>
+        <div class=" bg-green">Flexbox subitem 2</div>
+        <div class=" bg-blue">Flexbox subitem 3</div>
+    </div>
+
+    <h1>Managing the layout of flex children: in the cross direction for vertical flow</h1>
+    <div class="vertical-flexbox parent-container flexbox-align-top">
+        <div class="width-33percent bg-red">Flexbox subitem 1 with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow</div>
+        <div class="width-33percent bg-green">Flexbox subitem 2</div>
+        <div class="width-33percent bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="vertical-flexbox parent-container flexbox-align-center">
+        <div class="width-33percent bg-red">Flexbox subitem 1 with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow</div>
+        <div class="width-33percent bg-green">Flexbox subitem 2</div>
+        <div class="width-33percent bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="vertical-flexbox parent-container flexbox-align-center">
+        <div class="bg-red">Flexbox subitem 1</div>
+        <div class="bg-green">Flexbox subitem 2 but made a bit larger</div>
+        <div class="bg-blue">Flexbox subitem 3 also larger</div>
+    </div>
+
+    <h1>Managing the size of flex children</h1>
+    <div class="simple-flexbox">
+        <div class="width-100 bg-red">No Flexbox subitem 1</div>
+        <div class="width-100 bg-green">No Flexbox subitem 2</div>
+        <div class="width-100 bg-blue">No Flexbox subitem 3</div>
     </div>
     <div class="simple-flexbox">
+        <div class="width-100 bg-red">No Flexbox subitem 1</div>
+        <div class="flexitem-auto bg-red">No Flexbox subitem 2</div>
+        <div class="flexitem-dim width-100 bg-green">No Flexbox subitem 3</div>
+        <div class="flexitem-dimpercentage width-100 bg-blue">No Flexbox subitem 4</div>
+    </div>
+    <div class="vertical-flexbox">
+        <div class="flexitem-dim bg-green">No Flexbox subitem 2</div>
+        <div class="flexitem-dimpercentage bg-blue">No Flexbox subitem 3</div>
+    </div>
+
+    <h1>Managing the size of flex children: excess or shortage of space</h1>
+    <div class="simple-flexbox">
+        <div class="flexitem-expand-grow1 bg-red">Flexbox subitem 1</div>
+        <div class="flexitem-expand-grow2 bg-green">Flexbox subitem 2</div>
+        <div class="bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox">
+        <div class="flexitem-expand-grow1 bg-red">Flexbox subitem 1 with much more text</div>
+        <div class="flexitem-expand-grow1 bg-green">Flexbox subitem 2</div>
+    </div>
+    <div class="simple-flexbox">
+        <div class="flexitem-collapse-noshrink bg-red">Flexbox subitem 1</div>
+        <div class="flexitem-dimpercentage-large flexitem-collapse-noshrink bg-green">Flexbox subitem 2</div>
+        <div class="flexitem-dimpercentage-large flexitem-collapse-noshrink bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="simple-flexbox">
+        <div class="flexitem-collapse-noshrink bg-red">Flexbox subitem 1</div>
+        <div class="flexitem-dimpercentage-large flexitem-collapse-shrink1 bg-green">Flexbox subitem 2</div>
+        <div class="flexitem-dimpercentage-large flexitem-collapse-shrink2 bg-blue">Flexbox subitem 3</div>
+    </div>
+
+    <h1>Managing the layout of flex children: in the direction of the flow for nested horizontal flow flexboxes</h1>
+    <div class="simple-flexbox parent-container">
+        <div class="simple-flexbox parent-container flexbox-justify-end">
+            <div class=" bg-red">Flexbox subitem 1</div>
+            <div class=" bg-green">Flexbox subitem 2</div>
+            <div class=" bg-blue">Flexbox subitem 3</div>
+        </div>
+    </div>
+    <div class="simple-flexbox parent-container">
+        <div class="simple-flexbox parent-container flexbox-justify-between">
+            <div class=" bg-red">Flexbox subitem 1</div>
+            <div class=" bg-green">Flexbox subitem 2</div>
+            <div class=" bg-blue">Flexbox subitem 3</div>
+        </div>
+    </div>
+
+
+    <!-- <div class="simple-flexbox">
         <div>Flexbox subitem 1</div>
         <div class="simple-flexbox flexbox-justify-end">
             <div >Flexbox subitem 1</div>
             <div>Flexbox subitem 2</div>
             <div>Flexbox subitem 3</div>
         </div>
+    </div> -->
+    <!-- <div class="simple-flexbox">
+        <div class="flexitem-dimpercentage">Flexbox subitem 1 %</div>
+        <div class="flexitem-dimpercentage">Flexbox subitem 2 %</div>
+        <div class="flexitem-dimpercentage">Flexbox subitem 3 %</div>
     </div>
     <div class="simple-flexbox">
+        <div>Flexbox subitem 1</div>
+        <div class="simple-flexbox">
+            <div class="flexitem-dimpercentage">Flexbox subitem 1</div>
+            <div class="flexitem-dimpercentage">Flexbox subitem 2</div>
+            <div class="flexitem-dimpercentage">Flexbox subitem 3</div>
+        </div>
+    </div> -->
+    <!-- <div class="simple-flexbox">
         <div>Flexbox subitem 1</div>
         <div class="simple-flexbox flexbox-justify-end flexitem-expand">
             <div >Flexbox subitem 1</div>
             <div>Flexbox subitem 2</div>
             <div>Flexbox subitem 3</div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

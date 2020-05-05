@@ -9,79 +9,209 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<title>Complex Bootstrap 4: Positioning</title>
 	<style>
+		.bg-red {
+			background-color:red;
+		}
+		.bg-green {
+			background-color:green;
+		}
+		.bg-blue {
+			background-color:blue;
+		}
+		.bg-orange {
+			background-color:orange;
+		}
+
 
 	</style>
 </head>
 <body>
+
+
+	<div class="container">
+		A navigation bar with direction column
+	</div>
+    <nav class="navbar flex-column navbar-light bg-light">
+        <a class="navbar-brand">My Brand</a>
+        <div class="navbar-nav flex-row">
+            <a class="nav-item nav-link" href="#">Centered1</a>
+            <a class="nav-item nav-link" href="#">Centered2</a>
+            <a class="nav-item nav-link" href="#">Centered3</a>
+        </div>
+    </nav>
+
+	<div class="container">
+		A navigation bar with direction column (with branding)
+	</div>
+    <nav class="navbar flex-column align-items-end navbar-light bg-light">
+        <a class="navbar-brand">My Brand</a>
+        <div class="navbar-nav flex-row">
+            <a class="nav-item nav-link" href="#">Item1</a>
+            <a class="nav-item nav-link" href="#">Item2</a>
+            <a class="nav-item nav-link" href="#">Item3</a>
+        </div>
+    </nav>
+
+    <!-- <div class="d-flex bg-red">
+        <div>Item 1</div>
+    </div>
+    <span>Span after block, before inlien</span>
+    <div class="d-inline-flex bg-blue">
+        <div>Item 1</div>
+    </div>
+    <span>Span after inline</span>
+    <div class="d-flex bg-red">
+        <div class="d-flex bg-green">Item 1</div>
+        <div class="d-flex bg-orange">Item 2</div>
+    </div>
+    <div class="d-inline-flex bg-blue">
+        <div class="d-inline-flex bg-green">Item 1</div>
+        <div class="d-inline-flex bg-orange">Item 2</div>
+    </div> -->
+
 	<div class="container">
 		A navigation bar
 	</div>
     <nav class="navbar navbar-light bg-light">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home</span></a>
-            <a class="nav-item nav-link" href="#">Menu1</a>
-            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-item nav-link" href="#">Left1</a>
+            <a class="nav-item nav-link" href="#">Left2</a>
+            <a class="nav-item nav-link" href="#">Left3</a>
         </div>
     </nav>
+
 	<div class="container">
-		A second navigation bar
+		A second navigation bar (with content between)
 	</div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Menu1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Right1</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Right2</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg justify-content-between navbar-light bg-light">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">Left1</a>
+            <a class="nav-item nav-link" href="#">Left2</a>
+            <a class="nav-item nav-link" href="#">Left3</a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">Right1</a>
+            <a class="nav-item nav-link" href="#">Right2</a>
+        </div>
     </nav>
+
 	<div class="container">
-		A second and a halve navigation bar
+		A second navigation bar with collapsing (with content between)
 	</div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="navbar-nav flex-fill justify-content-between">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link" href="#">Home</span></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link active" href="#">Menu1</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link" href="#">Right1</span></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link active" href="#">Right2</a>
-                </li>
-            </ul>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Left1</a>
+                <a class="nav-item nav-link" href="#">Left2</a>
+                <a class="nav-item nav-link" href="#">Left3</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Right1</a>
+                <a class="nav-item nav-link" href="#">Right2</a>
+            </div>
         </div>
     </nav>
-	<div class="container">
-		A third navigation bar
+
+    <div class="container">
+		A second navigation bar (with mr-auto)
 	</div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="#">Left1</a>
+            <a class="nav-item nav-link" href="#">Left2</a>
+            <a class="nav-item nav-link" href="#">Left3</a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">Right1</a>
+            <a class="nav-item nav-link" href="#">Right2</a>
+        </div>
+    </nav>
+
+    <div class="container">
+		A second navigation bar with collapsing (with mr-auto)
+	</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-nav flex-fill">
+            <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="#">Left1</a>
+                <a class="nav-item nav-link" href="#">Left2</a>
+                <a class="nav-item nav-link" href="#">Left3</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Right1</a>
+                <a class="nav-item nav-link" href="#">Right2</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+		A second navigation bar with collapsing (with ml-auto, but probably not what you want elow the responsive breakpoint)
+	</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-nav flex-fill">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Left1</a>
+                <a class="nav-item nav-link" href="#">Left2</a>
+                <a class="nav-item nav-link" href="#">Left3</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="#">Right1</a>
+                <a class="nav-item nav-link" href="#">Right2</a>
+            </div>
+        </div>
+    </nav>
+
+	<div class="container">
+		A second navigation bar with 3 subsections and collapsing (with content between)
+	</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-nav flex-fill justify-content-between">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Left1</a>
+                <a class="nav-item nav-link" href="#">Left2</a>
+                <a class="nav-item nav-link" href="#">Left3</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Right1.1</a>
+                <a class="nav-item nav-link" href="#">Right1.2</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Right2.1</a>
+                <a class="nav-item nav-link" href="#">Right2.2</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+		A second navigation bar with 3 subsections and collapsing (with mr-auto)
+	</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-nav flex-fill">
+            <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="#">Left1</a>
+                <a class="nav-item nav-link" href="#">Left2</a>
+                <a class="nav-item nav-link" href="#">Left3</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Right1.1</a>
+                <a class="nav-item nav-link" href="#">Right1.2</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Right2.1</a>
+                <a class="nav-item nav-link" href="#">Right2.2</a>
+            </div>
+        </div>
+    </nav>
+
+	<div class="container">
+		A third navigation bar (with a button)
+	</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent_btn" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent_btn">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Left1</span></a>
@@ -103,5 +233,79 @@
             </ul>
         </div>
     </nav>
+
+	<div class="container">
+		A third navigation bar (with a button NOT USING navbar-collapse ???)
+	</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent_btn_wrong" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-nav justify-content-between" id="navbarSupportedContent_btn_wrong">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Left1</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Left2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link href="#">Left3</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Right1</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Right2</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+	<div class="container">
+		A third navigation bar (with a button and 2 collapses just to make a point)
+	</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent_btn_2collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent_btn_2collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Collapse1 Left1</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Collapse1 Left2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link href="#">Collapse1 Left3</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Collapse1 Right1</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Collapse1 Right2</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent_btn_2collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Collapse2 Left1</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Collapse2 Left2</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
 </body>
 </html>

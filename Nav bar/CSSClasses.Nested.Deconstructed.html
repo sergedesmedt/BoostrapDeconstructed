@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>CSS Classes: hiërarchical</title>
+	<style>
+        .parentsection {
+            border: solid;
+            border-color: red;
+        }
+        
+        .mainsection {
+            border: solid;
+            border-color: blue;
+        }
+        
+        .parentsection .mainsection {
+            border: solid;
+            border-color: green;
+        }
+
+        .something-inbetween{
+            border: solid;
+            border-color: purple;
+        }
+
+        .othersection {
+            border: dashed;
+            border-color: blue;
+        }
+        
+        .parentsection .othersection {
+            border: dashed;
+            border-color: green;
+        }
+        
+        .parentsection .othersection .othersection {
+            border: dashed;
+            border-color: maroon;
+        }
+
+        .se_first_part {
+            border: dashed;
+            border-color: mediumvioletred;
+        }
+
+        .se_second_part {
+            border: dashed;
+            border-color: olive;
+        }
+
+        .se_first_part.se_second_part {
+            border: double;
+            border-color:turquoise;
+        }
+	</style>
+</head>
+<body>
+    <h1>No nesting</h1>
+    <div>
+        <div class="mainsection">
+            <div>A second subsection</div>
+        </div>
+        <div class="mainsection">A second main section</div>
+    </div>
+    <h1><a name="simple"></a>Simple nesting</h1>
+    <div class="parentsection">
+        <div class="mainsection">A mainsection inside a parentsection</div>
+        <div>
+            <div class="mainsection">A mainsection two levels deep</div>
+            <div>A second subsection</div>
+        </div>
+        <div class="mainsection">
+            <div class="mainsection">A mainsection within another mainsection</div>
+            <div>A second subsection</div>
+        </div>
+        <div class="something-inbetween">
+            <div class="mainsection">A mainsection with something-inbetween</div>
+            <div>A second subsection</div>
+        </div>
+    </div>
+    <h1><a name="complex"></a>Complex nesting</h1>
+    <div class="parentsection">
+        <div class="othersection">A othersection inside parentsection</div>
+        <div class="othersection">
+            <div class="something-inbetween">
+                <div class="othersection">A othersection with something-inbetween</div>
+            </div>
+            </div>
+        <div class="something-inbetween">
+            <div>A second subsection</div>
+            <div class="othersection">A othersection with something-inbetween</div>
+            <div class="othersection">
+                <div class="othersection">Something-inbetween a othersection within another othersection</div>
+            </div>
+        </div>
+    </div>
+    <h1><a name="singleelem"></a>Single element target</h1>
+    <div>
+        <div class="se_first_part se_second_part">A first_part and a second_section together</div>
+        <div class="se_first_part">
+            <div class="se_second_part">A second part_nested within a first_part</div>
+            <div>A subsection</div>
+        </div>
+    </div>
+    <!-- <div>
+        <div class="mainsection">A second main section in a non parent section</div>
+    </div> -->
+</body>
+</html>

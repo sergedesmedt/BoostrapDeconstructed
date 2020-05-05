@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Javascript DOM manipulation</title>
+	<style>
+        .el-frame-violet {
+            border: solid;
+            border-color: violet;
+        }
+
+		.bg-red {
+			background-color:red;
+		}
+		.bg-green {
+			background-color:green;
+		}
+		.bg-blue {
+			background-color:lightblue;
+		}
+    </style>
+</head>
+<body>
+    <h1>A none-affected buttons</h1>
+    <button >Unafected Button 1</button>
+    <button data-search="cantFindMe">Unaffected Button 2</button>
+
+    <h1>Some affected buttons</h1>
+    <button data-search="searchForMe" data-refid="actOnMe1" >Button 1</button>
+    <button data-search="searchForMe" data-refid="actOnMe2" >Button 2</button>
+    <div>
+        <div id="actOnMe1" class="bg-red">Target of button 1</div>
+        <div id="actOnMe2" class="bg-green">Target of button 2</div>
+        <div class="bg-blue">No target</div>
+    </div>
+    <script>
+        console.log("Running the code...");
+
+        // Find all elements on the page with a certain reference attribute which has a certain value
+        let allAffectedButtons = document.querySelectorAll('[data-search="searchForMe"]');
+
+        allAffectedButtons.forEach(function(button) {
+            console.log("Button: " + button.innerHTML);
+
+            // For these, get the value of the another attribute
+            let btnTarget = button.getAttribute("data-refid");
+
+            // Attach a click handler to those found elements
+            button.addEventListener("click", function(){
+                console.log("Button target (from the click handler): " + btnTarget);
+
+                // which adds or removes a CSS class which controls the desired properties 
+                // to the element with an id equal to the value of the `data-refid` attribute
+                document.getElementById(btnTarget).classList.toggle('el-frame-violet');
+            });
+        })
+    </script>
+</body>
+</html>

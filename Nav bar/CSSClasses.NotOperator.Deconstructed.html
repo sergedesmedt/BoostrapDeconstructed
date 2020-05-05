@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>CSS Classes: not() selector</title>
+	<style>
+        .bordered:not(.noborder) {
+            border: solid;
+            border-color: blue;
+        }
+       
+	</style>
+</head>
+<body>
+    <div class="bordered">
+        A bordered section
+    </div>
+    <div class="bordered noborder">
+        A not bordered section
+    </div>
+</body>
+</html>
