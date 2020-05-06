@@ -121,6 +121,10 @@
             flex-wrap: nowrap;
         }
 
+        .marginleft-auto {
+            margin-left: auto;
+        }
+
 	</style>
 </head>
 <body>
@@ -177,6 +181,23 @@
         <div class="width-33percent bg-blue">Flexbox subitem 3</div>
     </div>
 
+    <h1>Managing the layout of flex children: in the cross direction for vertical flow</h1>
+    <div class="vertical-flexbox parent-container flexbox-align-top">
+        <div class="width-33percent bg-red">Flexbox subitem 1 with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow</div>
+        <div class="width-33percent bg-green">Flexbox subitem 2</div>
+        <div class="width-33percent bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="vertical-flexbox parent-container flexbox-align-center">
+        <div class="width-33percent bg-red">Flexbox subitem 1 with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow</div>
+        <div class="width-33percent bg-green">Flexbox subitem 2</div>
+        <div class="width-33percent bg-blue">Flexbox subitem 3</div>
+    </div>
+    <div class="vertical-flexbox parent-container flexbox-align-center">
+        <div class="bg-red">Flexbox subitem 1</div>
+        <div class="bg-green">Flexbox subitem 2 but made a bit larger</div>
+        <div class="bg-blue">Flexbox subitem 3 also larger</div>
+    </div>
+
     <h1><a name="wrapping"></a>Managing content wrapping</h1>
     <div class="simple-flexbox flexbox-wrapping">
         <div class=" bg-red">Flexbox subitem 1</div>
@@ -207,41 +228,40 @@
         <div class=" bg-blue">Flexbox subitem 3</div>
     </div>
 
-    <h1>Managing the layout of flex children: in the cross direction for vertical flow</h1>
-    <div class="vertical-flexbox parent-container flexbox-align-top">
-        <div class="width-33percent bg-red">Flexbox subitem 1 with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow</div>
-        <div class="width-33percent bg-green">Flexbox subitem 2</div>
-        <div class="width-33percent bg-blue">Flexbox subitem 3</div>
+    <h1><a name="nested"></a>Managing the layout of flex children: in the direction of the flow for nested horizontal flow flexboxes</h1>
+    <div class="simple-flexbox parent-container">
+        <div class="simple-flexbox parent-container flexbox-justify-end">
+            <div class=" bg-red">Flexbox subitem 1</div>
+            <div class=" bg-green">Flexbox subitem 2</div>
+            <div class=" bg-blue">Flexbox subitem 3</div>
+        </div>
     </div>
-    <div class="vertical-flexbox parent-container flexbox-align-center">
-        <div class="width-33percent bg-red">Flexbox subitem 1 with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow, with extra text to trigger overflow</div>
-        <div class="width-33percent bg-green">Flexbox subitem 2</div>
-        <div class="width-33percent bg-blue">Flexbox subitem 3</div>
-    </div>
-    <div class="vertical-flexbox parent-container flexbox-align-center">
-        <div class="bg-red">Flexbox subitem 1</div>
-        <div class="bg-green">Flexbox subitem 2 but made a bit larger</div>
-        <div class="bg-blue">Flexbox subitem 3 also larger</div>
+    <div class="simple-flexbox parent-container">
+        <div class="simple-flexbox parent-container flexbox-justify-between">
+            <div class=" bg-red">Flexbox subitem 1</div>
+            <div class=" bg-green">Flexbox subitem 2</div>
+            <div class=" bg-blue">Flexbox subitem 3</div>
+        </div>
     </div>
 
-    <h1>Managing the size of flex children</h1>
+    <h1><a name="sizebasis"></a>Managing the size of flex children</h1>
     <div class="simple-flexbox">
-        <div class="width-100 bg-red">No Flexbox subitem 1</div>
-        <div class="width-100 bg-green">No Flexbox subitem 2</div>
-        <div class="width-100 bg-blue">No Flexbox subitem 3</div>
+        <div class="width-100 bg-red">Flexbox subitem 1</div>
+        <div class="width-100 bg-green">Flexbox subitem 2</div>
+        <div class="width-100 bg-blue">Flexbox subitem 3</div>
     </div>
     <div class="simple-flexbox">
-        <div class="width-100 bg-red">No Flexbox subitem 1</div>
-        <div class="flexitem-auto bg-red">No Flexbox subitem 2</div>
-        <div class="flexitem-dim width-100 bg-green">No Flexbox subitem 3</div>
-        <div class="flexitem-dimpercentage width-100 bg-blue">No Flexbox subitem 4</div>
+        <div class="width-100 bg-red">Flexbox subitem 1</div>
+        <div class="flexitem-auto bg-red">Flexbox subitem 2</div>
+        <div class="flexitem-dim width-100 bg-green">Flexbox subitem 3</div>
+        <div class="flexitem-dimpercentage width-100 bg-blue">Flexbox subitem 4</div>
     </div>
     <div class="vertical-flexbox">
-        <div class="flexitem-dim bg-green">No Flexbox subitem 2</div>
-        <div class="flexitem-dimpercentage bg-blue">No Flexbox subitem 3</div>
+        <div class="flexitem-dim bg-green">Flexbox subitem 2</div>
+        <div class="flexitem-dimpercentage bg-blue">Flexbox subitem 3</div>
     </div>
 
-    <h1>Managing the size of flex children: excess or shortage of space</h1>
+    <h1><a name="sizespace"></a>Managing the size of flex children: excess or shortage of space</h1>
     <div class="simple-flexbox">
         <div class="flexitem-expand-grow1 bg-red">Flexbox subitem 1</div>
         <div class="flexitem-expand-grow2 bg-green">Flexbox subitem 2</div>
@@ -262,20 +282,27 @@
         <div class="flexitem-dimpercentage-large flexitem-collapse-shrink2 bg-blue">Flexbox subitem 3</div>
     </div>
 
-    <h1>Managing the layout of flex children: in the direction of the flow for nested horizontal flow flexboxes</h1>
-    <div class="simple-flexbox parent-container">
-        <div class="simple-flexbox parent-container flexbox-justify-end">
-            <div class=" bg-red">Flexbox subitem 1</div>
-            <div class=" bg-green">Flexbox subitem 2</div>
-            <div class=" bg-blue">Flexbox subitem 3</div>
-        </div>
+
+    <h1><a name="automargin_noflexbox"></a>Applying auto margins outside a flexbox</h1>
+    <div>Some text and then suddenly a <span class="marginleft-auto bg-red">span with left margin set to auto</span> and then some more text: nothing is happening!</div>
+    <div>
+        <div class="marginleft-auto bg-red">Some nested div inside a parent div</div>
+        <div class="width-100 marginleft-auto bg-blue">Some nested div inside a parent div set to a fixed width</div>
     </div>
-    <div class="simple-flexbox parent-container">
-        <div class="simple-flexbox parent-container flexbox-justify-between">
-            <div class=" bg-red">Flexbox subitem 1</div>
-            <div class=" bg-green">Flexbox subitem 2</div>
-            <div class=" bg-blue">Flexbox subitem 3</div>
-        </div>
+
+    <h1><a name="automargin_flexbox"></a>Applying auto margins inside a flexbox</h1>
+    <div class="simple-flexbox">
+        <div class="bg-red">Flexbox subitem 1</div>
+        <div class="marginleft-auto bg-blue">Flexbox subitem 2</div>
+    </div>
+    <div class="simple-flexbox">
+        <div class="bg-red">Flexbox subitem 1</div>
+        <div class="marginleft-auto bg-blue">Flexbox subitem 2</div>
+        <div class="marginleft-auto bg-green">Flexbox subitem 3</div>
+    </div>
+    <div class="vertical-flexbox">
+        <div class="bg-red">Flexbox subitem 1</div>
+        <div class="marginleft-auto bg-blue">Flexbox subitem 2</div>
     </div>
 
 
