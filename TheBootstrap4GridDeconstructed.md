@@ -56,7 +56,7 @@ Some valid markup is:
 	</div>
 </div>
 ```
-[See it in action](http://htmlpreview.github.io/?https://github.com/sergedesmedt/BootstrapDeconstructed/blob/master/Responsive%20Grid/Sample01.SimpleSpanSum.Bootstrap.html)
+[See it in action](http://htmlpreview.github.io/?https://github.com/sergedesmedt/BootstrapDeconstructed/blob/master/Responsive%20Grid/Sample01.SimpleSpanSum.Bootstrap4.html)
 
 
 Nothing much has changed here: the sum of the spans still add to 12, and the xx portion of the name still defines from what screen width the columns transition to rows.
